@@ -8,7 +8,7 @@ using Qatar06.Models.BaseClassesM;
 
 namespace Qatar06.Models
 {
-    class GameM : GameEntityM
+    public class GameM : GameEntityM
     {
         #region Private attributes and public properties.
 
@@ -23,12 +23,13 @@ namespace Qatar06.Models
         #endregion
 
         #region Constructors.
-
         public GameM()
-            : base("New Game", 1)
+            : base()
         {
-            CurrentPlayer = new PlayerM("New Player", 1, 1010);
+            Name = "Default Game";
+            CurrentPlayer = new PlayerM();
         }
+        
         public GameM(string name, int level, PlayerM currentPlayer)
             : base(name, level)
         {

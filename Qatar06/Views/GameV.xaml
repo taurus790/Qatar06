@@ -7,7 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="500"
              
-             xmlns:views="clr-namespace:Qatar06.Views">
+             xmlns:Views="clr-namespace:Qatar06.Views"
+             xmlns:ViewModels="clr-namespace:Qatar06.ViewModels">
 
     <DockPanel Background="LightSlateGray">
 
@@ -26,12 +27,57 @@
         </StackPanel>
 
         <StackPanel DockPanel.Dock="Left" Background="LightSteelBlue"
-                    Margin="5,2,2,2" MinWidth="100">
-            
-            <views:PlayerV Margin="2,2,2,0"/>
+                    Margin="5,2,2,2" MinWidth="100" MaxWidth="200">
+
+            <Border Background="WhiteSmoke" 
+                    Margin="2,2,2,0" Padding="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                       FontWeight="Bold"
+                       Text="Game Info:"/>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0" 
+                               Text="Id:"/>
+                    <TextBlock Grid.Row="1" Grid.Column="1"
+                               Text="{Binding Id}"/>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" 
+                               Text="Name:"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1"
+                               Text="{Binding Name}"/>
+
+                    <TextBlock Grid.Row="3" Grid.Column="0" 
+                               Text="Level:"/>
+                    <TextBlock Grid.Row="3" Grid.Column="1"
+                               Text="{Binding Level}"/>
+
+                    <TextBlock Grid.Row="4" Grid.Column="0" 
+                               Text="Current Player:"/>
+                    <TextBlock Grid.Row="4" Grid.Column="1"
+                               Text="{Binding CurrentPlayer.Name}"/>
+
+                </Grid>
+            </Border>
+
+            <Views:PlayerV Margin="2,2,2,0"
+                           DataContext="{Binding Path=CurrentPlayer}"/>
 
             <TextBlock Background="WhiteSmoke" Margin="2,2,2,0"
-                       Text="Left"/>
+                       Text="News: "
+                       FontWeight="Bold"/>
         </StackPanel>
 
         <StackPanel DockPanel.Dock="Right" Background="LightSteelBlue"

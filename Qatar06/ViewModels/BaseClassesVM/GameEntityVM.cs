@@ -4,17 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Qatar06.Models.BaseClassesM
+using Qatar06.Models.BaseClassesM;
+
+namespace Qatar06.ViewModels.BaseClassesVM
 {
-    public class GameEntityM : BaseM
+    public class GameEntityVM : BaseVM
     {
         #region Private attributes and public properties.
 
+        private GameEntityM _model;
         private int _id;
         private static int _lastId;
         private string _name;
         private int _level;
 
+        public GameEntityM Model
+        {
+            get { return _model; }
+            set { _model = value; OnPropertyChanged(nameof(Model)); }
+        }
         public int Id
         {
             get { return _id; }
@@ -38,20 +46,37 @@ namespace Qatar06.Models.BaseClassesM
 
         #endregion
 
-        #region Constructors. 
+        #region Relay commands. 
 
-        public GameEntityM()
+
+
+        #endregion
+
+        #region Constructor. 
+        /*
+        public GameEntityVM()
         {
-            Id = ++LastId;
-            Name = "Default Game Entity";
-            Level = 1;
+            Model = new GameEntityM();
+
+            //LoadData();
         }
 
-        public GameEntityM(string name, int level)
+        public GameEntityVM(GameEntityM model)
         {
-            Id = ++LastId;
-            Name = name;
-            Level = level;
+            Model = model;
+
+            //LoadData();
+        }
+        */
+        #endregion
+
+        #region Methods. 
+
+        public virtual void LoadData()
+        {
+            Id = Model.Id;
+            Name = Model.Name;
+            Level = Model.Level;
         }
 
         #endregion

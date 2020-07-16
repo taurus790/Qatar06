@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Qatar06.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,14 @@ namespace Qatar06
     /// </summary>
     public partial class MainWindow : Window
     {
+        GameVM currentGame;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            currentGame = new GameVM();
+            this.DataContext = currentGame;
         }
     }
 }

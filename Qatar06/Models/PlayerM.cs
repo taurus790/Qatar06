@@ -24,6 +24,13 @@ namespace Qatar06.Models
 
         #region Constructors.
 
+        public PlayerM()
+            :base()
+        {
+            Name = "Default Player";
+            Money = 1010;
+        }
+
         public PlayerM(string name, int level, double money)
             : base(name, level)
         {

@@ -17,6 +17,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -26,7 +27,7 @@
 
             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                        FontWeight="Bold"
-                       Text="Info:"/>
+                       Text="Player Info:"/>
 
             <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
                    MaxWidth="60" MaxHeight="80"/>
@@ -35,17 +36,22 @@
             <TextBlock Grid.Row="2" Grid.Column="0" 
                    Text="Id:"/>
             <TextBlock Grid.Row="2" Grid.Column="1"
-                   Text="{Binding CurrentPlayer.Id}"/>
+                   Text="{Binding Id}"/>
             
             <TextBlock Grid.Row="3" Grid.Column="0" 
                    Text="Name:"/>
             <TextBlock Grid.Row="3" Grid.Column="1"
-                   Text="{Binding CurrentPlayer.Name}"/>
+                   Text="{Binding Name}"/>
 
             <TextBlock Grid.Row="4" Grid.Column="0" 
-                   Text="Money:"/>
+                   Text="Level:"/>
             <TextBlock Grid.Row="4" Grid.Column="1"
-                   Text="{Binding CurrentPlayer.Money}"/>
+                   Text="{Binding Level}"/>
+            
+            <TextBlock Grid.Row="5" Grid.Column="0" 
+                   Text="Money:"/>
+            <TextBlock Grid.Row="5" Grid.Column="1"
+                   Text="{Binding Money}"/>
         </Grid>
     </Border>
     
