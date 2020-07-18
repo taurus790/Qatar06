@@ -15,8 +15,37 @@
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal"
                     Margin="5,5,5,2"
                     Background="LightSteelBlue">
-            <TextBlock Background="WhiteSmoke"
-                       Text="Top"/>
+
+            <Menu>
+                <MenuItem Header="Game">
+                    <MenuItem Header="Load"/>
+                    <MenuItem Header="Save"/>
+                </MenuItem>
+                <MenuItem Header="New">
+                    <MenuItem Header="New game"/>
+                    <MenuItem Header="New player"/>
+                    <MenuItem Header="New world"/>
+                    <MenuItem Header="New building"/>
+                    <MenuItem Header="New transport"/>
+                    <MenuItem Header="New way"/>
+                </MenuItem>
+                <MenuItem Header="Edit">
+                    <MenuItem Header="Edit game"/>
+                    <MenuItem Header="Edit player"/>
+                    <MenuItem Header="Edit world"/>
+                    <MenuItem Header="Edit building"/>
+                    <MenuItem Header="Edit transport"/>
+                    <MenuItem Header="Edit way"/>
+                </MenuItem>
+                <MenuItem Header="View">
+                    <MenuItem Header="1"/>
+                </MenuItem>
+                <MenuItem Header="Help">
+                    <MenuItem Header="1"/>
+                </MenuItem>
+                <MenuItem Header="Test"/>
+            </Menu>
+            
         </StackPanel>
 
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal"
