@@ -36,12 +36,18 @@ namespace Qatar06.ViewModels
 
         #region Constructor. 
 
-        public GameVM() 
+        // Constructor with no data.
+        public GameVM()
         {
-            Model = new GameM();
+        }
+        // Constructor with default datas.
+        public GameVM(int design)
+        {
+             Model = new GameM(design);
+            //Model.CurrentPlayer = new PlayerM(design);
             LoadData();
         }
-
+        // Constructor with given data.
         public GameVM(GameM model)
         {
             Model = model;

@@ -27,7 +27,7 @@ namespace Qatar06
         {
             InitializeComponent();
 
-            currentGame = new GameVM();
+            currentGame = new GameVM(1);
             this.DataContext = currentGame;
         }
     }

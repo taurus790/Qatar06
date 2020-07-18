@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -56,16 +57,18 @@ namespace Qatar06.ViewModels.BaseClassesVM
         /*
         public GameEntityVM()
         {
-            Model = new GameEntityM();
-
-            //LoadData();
         }
+        public GameEntityVM(int design)
+        {
+            Model = new GameEntityM(design);
 
+            LoadData();
+        }
         public GameEntityVM(GameEntityM model)
         {
             Model = model;
 
-            //LoadData();
+            LoadData();
         }
         */
         #endregion

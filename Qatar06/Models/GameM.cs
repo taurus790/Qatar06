@@ -23,13 +23,20 @@ namespace Qatar06.Models
         #endregion
 
         #region Constructors.
+
+        // Constructor with no data.
         public GameM()
             : base()
         {
-            Name = "Default Game";
-            CurrentPlayer = new PlayerM();
         }
-        
+        // Constructor with default datas.
+        public GameM(int design)
+            : base(design)
+        {
+            Name = "Default Game";
+            CurrentPlayer = new PlayerM(design);
+        }
+        // Constructor with given data.
         public GameM(string name, int level, PlayerM currentPlayer)
             : base(name, level)
         {

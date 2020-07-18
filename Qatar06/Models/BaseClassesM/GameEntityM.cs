@@ -40,13 +40,18 @@ namespace Qatar06.Models.BaseClassesM
 
         #region Constructors. 
 
+        // Constructor with no data.
         public GameEntityM()
+        {
+        }
+        // Constructor with default datas.
+        public GameEntityM(int design)
         {
             Id = ++LastId;
             Name = "Default Game Entity";
             Level = 1;
         }
-
+        // Constructor with given data.
         public GameEntityM(string name, int level)
         {
             Id = ++LastId;
